@@ -25,19 +25,23 @@ body {
     box-shadow: 0 8px 30px rgba(0,0,0,0.2);
 }
 
-/* Logo */
+/* Logo Circular Container */
 .logo {
     width: 90px;
     height: 90px;
     border-radius: 50%;
     background: white;
-    color: #ff4d4d;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
     margin: auto;
-    font-size: 24px;
+    overflow: hidden; /* Clips the image cleanly into a circle */
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the circle without distortion */
 }
 
 /* Buttons */
@@ -58,7 +62,7 @@ body {
 <div class="glass-card text-center">
 
     <div class="logo mb-3">
-        <img src="1.jpg" alt="Gulabdas Kids Wear" style=width:7; height:7;">
+        <img src="1.jpg" alt="Gulabdas Kids Wear">
     </div>
 
     <h3 class="fw-bold text-white">Gulabdas Kids Wear</h3>
